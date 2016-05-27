@@ -5,11 +5,11 @@ fizzbuzz(){
 	local OUTPUT=""
 	if [[ $(($INPUT % 3)) == 0 ]] 
 	then
-		OUTPUT="fizz"
+		OUTPUT="Fizz"
 	fi
 	if [[ $(($INPUT % 5)) == 0 ]] 
 	then
-		OUTPUT=$OUTPUT"buzz"
+		OUTPUT=$OUTPUT"Buzz"
 	fi
 	if [[ -z $OUTPUT ]]
 	then
@@ -18,9 +18,9 @@ fizzbuzz(){
 	echo $OUTPUT
 }
 wtffizzbuzz(){
-	expr $1 % 15 == 0 > /dev/null && echo fizzbuzz && return || 
-	expr $1 % 3 == 0 > /dev/null && echo fizz && return || 
-	expr $1 % 5 == 0 > /dev/null && echo buzz && return || 
+	expr $1 % 15 == 0 > /dev/null && echo FizzBuzz && return || 
+	expr $1 % 3 == 0 > /dev/null && echo Fizz && return || 
+	expr $1 % 5 == 0 > /dev/null && echo Buzz && return || 
 	echo $1 
 }
 for i in `seq 100`
