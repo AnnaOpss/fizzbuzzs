@@ -8,9 +8,7 @@ function betterFizzbuzz(n) {
 		result += "Fizz";
 	if (n % 5 === 0)
 		result += "Buzz";
-	if (result === "")
-		result = n;
-	console.log(result);
+	console.log(result || n);
 }
 
 for(var i = 0; i < 100; i++){
